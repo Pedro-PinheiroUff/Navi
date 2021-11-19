@@ -4,15 +4,19 @@ alunos = dict()
 
 while len(alunos) < 5:
 
-    notas = input()
-    notas = notas.replace(",", ".")
+    notas = input().replace(",", ".")
 
     try:
 
         notas = float(notas)
-        alunos["aluno" + str(len(alunos)+1)] = notas
+        if notas >0:
+
+                alunos["aluno" + str(len(alunos)+1)] = notas
+        else:
+            print("Nota inválida, digite novamente.")
 
     except:
+
         print("Nota inválida, digite novamente.")
 
 # Ordenando os alunos
